@@ -12,10 +12,16 @@
 
   <body>
     <h1>Etch-A-Sketch</h1>
-    <label for="color-picker">Select Color:</label>
+    <label for="color-picker">Color Selector:</label>
     <input type="color" id="color-picker" value="#000000" />
     <div class="container" id="grid-container"></div>
     <button id="clear-button">Shake to Clear</button>
+    <div id="instructions">
+      <p><strong>Left Click:</strong> Hold to color squares</p>
+      <p><strong>Right Click:</strong> Hold to erase squares</p>
+      <p><strong>Color Selector:</strong> Click to change fill color</p>
+      <p><strong>Shake to Clear:</strong> Click to reset the board</p>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
