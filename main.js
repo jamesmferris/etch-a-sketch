@@ -68,11 +68,18 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
   });
 
-  // Clear the board
+  // Clear the board with shake animation
   clearButton.addEventListener("click", function () {
-    const squares = document.querySelectorAll(".square");
-    squares.forEach((square) => {
-      square.style.backgroundColor = "#f0f0f0";
-    });
+    container.classList.add("shake");
+
+    setTimeout(() => {
+      container.classList.remove("shake");
+
+      // Clear the board
+      const squares = document.querySelectorAll(".square");
+      squares.forEach((square) => {
+        square.style.backgroundColor = "#f0f0f0";
+      });
+    }, 1000); // Duration of shake animation
   });
 });
