@@ -35,9 +35,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // for loop to create the grid
-  for (let i = 0; i < 16 * 16; i++) {
+  const numSquares = 32; // 32x32 grid
+  const squareSize = 640 / numSquares; // Calculate size based on container size
+
+  for (let i = 0; i < numSquares * numSquares; i++) {
     const div = document.createElement("div");
     div.classList.add("square");
+    div.style.width = `${squareSize}px`;
+    div.style.height = `${squareSize}px`;
     container.appendChild(div);
 
     // Add event listeners for mouse events
@@ -68,11 +73,18 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
   });
 
-  // Clear the board
+  // Clear the board with shake animation
   clearButton.addEventListener("click", function () {
-    const squares = document.querySelectorAll(".square");
-    squares.forEach((square) => {
-      square.style.backgroundColor = "#f0f0f0";
-    });
+    container.classList.add("shake");
+
+    setTimeout(() => {
+      container.classList.remove("shake");
+
+      // Clear the board
+      const squares = document.querySelectorAll(".square");
+      squares.forEach((square) => {
+        square.style.backgroundColor = "#f0f0f0";
+      });
+    }, 1000); // Duration of shake animation
   });
 });

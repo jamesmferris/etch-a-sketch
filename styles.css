@@ -46,6 +46,7 @@ label {
   width: 640px;
   height: 640px;
   border: 2px solid #333;
+  position: relative;
 }
 
 .square {
@@ -64,4 +65,52 @@ label {
   background-color: #f0f0f0;
   border: 2px solid #333;
   border-radius: 5px;
+}
+
+#instructions {
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  text-align: left;
+  width: 300px;
+}
+
+#instructions p {
+  margin: 8px 0;
+}
+
+.shake {
+  animation: shake-animation 1s ease-in-out;
+}
+
+@keyframes shake-animation {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  5%,
+  15%,
+  25%,
+  35%,
+  45%,
+  55%,
+  65%,
+  75%,
+  85%,
+  95% {
+    transform: translateX(-30px);
+  }
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90% {
+    transform: translateX(30px);
+  }
 }
