@@ -8,3 +8,5 @@ Features
 	•	Erase: Hold the right mouse button to erase squares.
 	•	Color Selector: Use the color picker to change the fill color.
 	•	Shake to Clear: Click the “Shake to Clear” button to reset the board with a shake animation.
+
+ Netlify URL: https://chipper-fenglisu-ed4dcb.netlify.app/
